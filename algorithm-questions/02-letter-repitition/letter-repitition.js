@@ -12,7 +12,7 @@ let letter =0 ;
 function countOfLetters( noSpacesString)
 {  
    
-    for (var i = 0; i < noSpacesString.length; i++) {
+    for (let i = 0; i < noSpacesString.length; i++) {
 
         if ((noSpacesString[i] >= 'A' && noSpacesString[i] <= 'Z')
             || (noSpacesString[i] >= 'a' && noSpacesString[i] <= 'z'))
