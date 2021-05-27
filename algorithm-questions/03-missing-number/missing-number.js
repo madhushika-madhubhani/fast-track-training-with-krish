@@ -1,4 +1,5 @@
 let inputArr = [10,11,14,13,15];
+//let inputArr = [5,3,2,1];
 let n = inputArr.length;
 let numberSort=(inputArr) =>{ 
     for(let i = 0; i < n; i++) {
