@@ -1,4 +1,4 @@
-let inputArr = [1,5,3,2,8,6,7,9,10];
+let inputArr = [10,11,14,13,15];
 let n = inputArr.length;
 let numberSort=(inputArr) =>{ 
     for(let i = 0; i < n; i++) {
@@ -16,5 +16,19 @@ let numberSort=(inputArr) =>{
     }
     return inputArr;
 }
+var sortedArray =numberSort(inputArr);
+console.log(sortedArray)
+/*
+var   missing =[];
+var ans =(arr)=>{
+    for (var i = arr[0]; i <=arr.length; i++) {
+        if (arr.indexOf(i) == -1) {
+          missing.push(i);
+        }
+      }
+      console.log(missing);
+        
+}
 
-console.log(numberSort(inputArr));
+ans(sortedArray);*/
+
