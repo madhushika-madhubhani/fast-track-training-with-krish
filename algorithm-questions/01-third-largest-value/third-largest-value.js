@@ -14,7 +14,7 @@ let numberSort=(inputArr) =>{
             }
          }
         if (min != i) {
-             // Swapping the elements
+           
              let tmp = inputArr[i]; 
              inputArr[i] = inputArr[min];
              inputArr[min] = tmp;      
