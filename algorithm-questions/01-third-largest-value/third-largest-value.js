@@ -13,12 +13,12 @@ let numberSort=(inputArr) =>{
                 min=j; 
             }
          }
-        if (min != i) {
+     
            
              let tmp = inputArr[i]; 
              inputArr[i] = inputArr[min];
              inputArr[min] = tmp;      
-       }
+       
     }
     return inputArr;
 }
