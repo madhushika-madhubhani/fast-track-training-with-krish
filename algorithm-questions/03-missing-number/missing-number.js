@@ -19,17 +19,20 @@ let numberSort=(inputArr) =>{
 }
 var sortedArray =numberSort(inputArr);
 console.log(sortedArray)
-/*
-var   missing =[];
-var ans =(arr)=>{
-    for (var i = arr[0]; i <=arr.length; i++) {
-        if (arr.indexOf(i) == -1) {
-          missing.push(i);
-        }
-      }
-      console.log(missing);
-        
-}
 
-ans(sortedArray);*/
+var findMissingNumber= (numArray)=>{
+    for(var i = 1; i < numArray.length; i++) 
+    {     
+        if(numArray[i] - numArray[i-1] != 1) 
+        {         
+            var x = numArray[i] - numArray[i-1];
+            for(var j=1; j<x ;j++){
+                missing.push(numArray[i-1]+j);
+                j++;
+            }
+        }
+    }
+    console.log(missingNumber);
+}
+findMissingNumber(sortedArray);
 
