@@ -32,7 +32,7 @@ var findMissingNumber= (numArray)=>{
             }
         }
     }
-    console.log(missingNumber);
+    console.log(missing);
 }
 findMissingNumber(sortedArray);
 
