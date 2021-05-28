@@ -1,4 +1,4 @@
-var unsortedArr = [340, 1, 3, 3, 76, 23, 4, 12, 122, 7642, 646];
+let unsortedArr = [340, 1, 3, 3, 76, 23, 4, 12, 122, 7642, 646];
 
 let merge =(leftArr, rightArr)=> {
 var sortedArr = [];
