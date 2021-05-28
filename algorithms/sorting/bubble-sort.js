@@ -1,5 +1,5 @@
 
-var numberArr = [33, 103, 3, 726, 200,"zndj", 2000,984,"bdjv","acv"];
+var numberArr = [33, 103, 3, 726, 200,2000,984];
 let bubbleSort = (inputArr) => {
     let len = inputArr.length;
     for (let i = 0; i < len; i++) {
