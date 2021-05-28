@@ -7,7 +7,7 @@ let numberSort=(inputArr) =>{
         
     for(let i = 0; i < n; i++) {
     
-        let min = i;
+        let min = i; //smallest index
         for(let j = i+1; j < n; j++){
             if(inputArr[j] < inputArr[min]) {
                 min=j; 
