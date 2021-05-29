@@ -20,6 +20,28 @@ let calcAlphabet = (word) =>{
         }
       return total
 }
+/*
+  function printAnagram(wordOne, wordSecond) {
+   
+    wordOne = wordOne.replace(/[^\w]/g, '').toLowerCase()
+    wordSecond = wordSecond.replace(/[^\w]/g, '').toLowerCase()
+    if (wordOne.length !== wordSecond.length) {
+        return false
+    }
+    let arrB = wordSecond.split("")
+    for (let char of wordOne ){ 
+        if (!arrB.includes(char)) {
+            return false
+            break;
+        } else {
+            arrB.splice(arrB.indexOf(char), 1)
+        }
+    }
+
+    return true
+
+}
+*/
 
 
  printAnagram=(stringOne,stringTwo)=>{
