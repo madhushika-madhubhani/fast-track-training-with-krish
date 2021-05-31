@@ -1,0 +1,22 @@
+{
+  "name": "08-in-order-traversal-of-binarytree",
+  "version": "1.0.0",
+  "description": "inorder traversal of binary tree",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhushika-madhubhani/fast-track-training-with-krish.git"
+  },
+  "author": "Madhushika",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhushika-madhubhani/fast-track-training-with-krish/issues"
+  },
+  "homepage": "https://github.com/madhushika-madhubhani/fast-track-training-with-krish#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
