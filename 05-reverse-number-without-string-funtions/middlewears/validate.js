@@ -1,6 +1,6 @@
-var express = require("express");
+const express = require("express");
 
-var validation = express();
+const validation = express();
 
 
 validation.get("/", function(req, res) {
