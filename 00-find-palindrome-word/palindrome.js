@@ -1,16 +1,16 @@
-var words = ['mom','civiC',new Date ('11-11-11'),67.909,'poopy','youi','qqq',{id:101,name:'anna'},new Date('09-09-09')];
+const words = ['mom','civiC',new Date ('11-11-11'),67.909,'poopy','youi','qqq',{id:101,name:'anna'},new Date('09-09-09')];
 
-var arr = [];
-var str = words.slice(0);
+const arr = [];
+let str = words.slice(0);
 console.log(str)
-var pal = str.toString().toLowerCase().split('').reverse().join('').split(',');
+let pal = str.toString().toLowerCase().split('').reverse().join('').split(',');
 console.log(pal)
 
 
-for (let i = 0; i < words.length; i++) {
+for (let index = 0; index < words.length; index++) {
   for (let k = 0; k < pal.length; k++) {
-    if (words[i] == pal[k]) {
-      arr.push(words[i])
+    if (words[index] == pal[k]) {
+      arr.push(words[index])
     }
   }
 }
