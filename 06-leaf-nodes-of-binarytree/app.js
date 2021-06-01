@@ -1,4 +1,4 @@
-const BinaryTree = require ("./service/leaf-node-print-service");
+import BinaryTree from './service/leaf-node-print-service.js'
 
 const binaryTree = new BinaryTree();
 let data =[30,44,5,34,67,89,90,44,3,56,2,35,76,4,2,67,92,94,98,82,78,,98,89,99,100,101,102];
