@@ -75,7 +75,7 @@ class Node {
             if (node.left) {
                 traversalFunction(node.left);
                 if (node.left.left === null && node.left.right === null) {
-                    //console.log(node.left)
+                  
                     result.push(node.left.data);
                 }
             }
