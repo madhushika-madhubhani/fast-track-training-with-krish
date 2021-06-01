@@ -57,5 +57,4 @@ class Node {
 
       
 }
-
-module.exports=BinaryTree
+export default BinaryTree
