@@ -38,7 +38,7 @@ class Node {
         return binaryTree(node);
       }
     }  
-    isBalanced() {
+ /*   isBalanced() {
         return (this.findMinHeight() >= this.findMaxHeight() - 1)
       }
     findMaxHeight(node = this.root) {
@@ -64,6 +64,16 @@ class Node {
         } else {
             return right + 1;
         };
+    } */
+        findMaxHeight(node = this.root) {
+        if (node == null) {
+            return -1;
+        };
+        let left = this.findMaxHeight(node.left);
+        let right = this.findMaxHeight(node.right);
+        let childDepth = left > right ? left : right;
+        return 1 + childDepth; 
+      
     }
     printLeafNodes() {
        
