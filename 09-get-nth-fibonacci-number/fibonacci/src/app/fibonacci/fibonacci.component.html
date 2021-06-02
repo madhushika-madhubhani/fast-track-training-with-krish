@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 align-center">
+            <div class="col-lg-6">
+                <label>Enter a number </label>
+                <input   min="0" (keypress)="onKeyPress($event)"type="number"[(ngModel)]="inputNumber">
+            </div>
+            
+              <div class="col-lg-4">
+                <button class="btn btn-primary center " (click)="getFromSequence()">Submit</button>
+           
+              </div>
+              <div class="col-lg-4">
+                <label>{{answer}}</label>
+              </div>
+           
+        </div>
+    </div>
+</div>
+
