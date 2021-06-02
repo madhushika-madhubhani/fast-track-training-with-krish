@@ -23,12 +23,12 @@ export class FibonacciComponent implements OnInit {
     }
   }
   getFromSequence() {
-      let fibonacciIndex = this.getfibonacciNmuner(this.inputNumber);
+      let fibonacciIndex = this.getfibonacciIndex(this.inputNumber);
       this.answer = `Index is : ` +fibonacciIndex.toString();
 
   }
 
-  getfibonacciNmuner(value: number): number {
+  getfibonacciIndex(value: number): number {
     if (value <= 1) 
             return value; 
         let firstNumber= 0, secondNumber = 1, nextNumber = 1; 
