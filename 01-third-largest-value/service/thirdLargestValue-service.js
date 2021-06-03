@@ -22,15 +22,15 @@ const sortArray = (origArray) => {
             let right = [];
             let sortedArray = [];
             let pivot = origArray.pop();
-            let length = origArray.length;
     
-            for (let i = 0; i < length; i++) {
-                if (origArray[i] <= pivot) {
-                    left.push(origArray[i]);
-                } else {
-                    right.push(origArray[i]);
-                }
-            }
+          for (const index in unsortedArray) {
+             if (unsortedArray[index] <= pivot) {
+                 leftArray.push(unsortedArray[index]);
+             } else {
+                 rightArray.push(unsortedArray[index]);
+             }
+             return sortedArray.concat(sortArray(leftArray), pivot, sortArray(rightArray))
+         }
           return sortedArray.concat(sortArray(left), pivot, sortArray(right))
            
         
