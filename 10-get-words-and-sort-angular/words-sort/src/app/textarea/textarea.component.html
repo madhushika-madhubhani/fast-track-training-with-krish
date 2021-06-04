@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    Sort the Words
+  </div>
+  <div class="card-body">
+
+    <div>
+      <label for="textArea">Enter paragraph</label>
+      <textarea [(ngModel)]="textArea" class="form-control" name="textArea" rows="5"
+        placeholder="Enter Text"></textarea>
+    </div>
+    <div>
+
+      <button class="btn btn-primary form-control" (click)="onClick()">Sort Paragraph</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <table *ngIf="sortedWordArray.length">
+
+      <thead>
+        <tr>
+          <th></th>
+          <th>Word</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let word of sortedWordArray; index as index">
+
+          <td>{{word}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
