@@ -1,0 +1,24 @@
+<div class="col-lg-12">
+    <div class="card ">
+      <div class="card-header ">
+        <h1>Find Largest Number</h1>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg">
+            <label>Enter a numbers  </label>
+            <input type="text" [(ngModel)]="numbersArray" placeholder="Eg:0,1,2,3"/>
+          </div>
+          <div class="col-lg">
+            <label>Enter a number to find position </label>
+            <input type="number" [(ngModel)]="numberToFind"/>
+          </div>
+          <div>
+            <button class="btn btn-primary " (click)="findGivenLargestNumber()">Find Position</button>
+          </div>
+          <div> <label>{{result}}</label></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
