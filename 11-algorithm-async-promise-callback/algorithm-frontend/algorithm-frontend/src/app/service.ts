@@ -1,22 +1,56 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { Observable } from 'rxjs/internal/Observable';
-
+import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators'
+import { error } from 'console';
+import { errorMonitor } from 'events';
 @Injectable({
   providedIn: 'root'
 })
 export class Service {
-baseURL = "http://localhost:3000/api/";
-    constructor(private http: HttpClient) { }
 
- findAnagram(firstWord: string, secondWord: string) {
-    
-   
+  baseLargestNumberURL = "http://localhost:3000/api/findlargest";
+  findLetterOccuranceURL = "http://localhost:3000/api/letterOccurance"
+  findAnagramURL = "http://localhost:3000/api/anagram"
+  httpOptions = {
+    headers: new HttpHeaders({ 'content-Type': 'application/json' })
+  }
+  constructor(private http: HttpClient) { }
 
- findLargeNumber(array:number[],largestNumber:number){
-    let res= this.http.post((`${this.baseURL}findlargest`),{array,largestNumber}).toPromise()
-    console.log("res",res)
-    return res;
+
+  findAnagram(firstWord: string, secondWord: string): Observable<any> {
+    return this.http.post(this.findAnagramURL, {
+      firstWord, secondWord
+    }, this.httpOptions).pipe(
+      catchError((error) => {
+        return throwError('An error occurred:', error.error);
+      })
+    );
+
+  }
+  findletterOccurance(word: string): Observable<any> {
+    return this.http.post(this.findLetterOccuranceURL, {
+      word
+    }, this.httpOptions).pipe(
+      catchError((error) => {
+        return throwError('An error occurred:', error.error);
+      })
+    );
+
   }
 
+  findLargeNumber(array: number[], largestNumber: number): Observable<any> {
+    return this.http.post(this.baseLargestNumberURL, {
+      array,largestNumber
+    }, this.httpOptions).pipe(
+      catchError((error) => {
+        return throwError('An error occurred:', error.error);
+      })
+    );
+
+  }
+
+
 }
+
+
