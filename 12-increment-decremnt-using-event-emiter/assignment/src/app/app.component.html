@@ -1,0 +1,11 @@
+<div>
+  <app-decrement [count]=counter (decrementChanged)= "countDecrementHander($event)"></app-decrement>
+</div>
+<div>
+  <app-increment [count]=counter (incremnetChanged)="countIncrementHandler($event)"></app-increment>
+</div>
+<div>
+  {{counter}}
+</div>
+
+
